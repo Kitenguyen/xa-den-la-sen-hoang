@@ -600,6 +600,19 @@ section {
 }
 
 /* Form */
+.combo-card .buy-combo-btn {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.combo-info-text {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -620,6 +633,59 @@ section {
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
   transition: all 0.2s ease-out;
+}
+
+.combo-checkbox-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.combo-checkbox-group .combo-checkbox-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.combo-checkbox-group .combo-checkbox-item:hover {
+  border-color: rgba(45, 80, 22, 0.55);
+  box-shadow: 0 14px 28px rgba(45, 80, 22, 0.08);
+  transform: translateY(-1px);
+}
+
+.combo-checkbox-group .combo-checkbox-item.selected {
+  border-color: var(--primary);
+  background: rgba(45, 80, 22, 0.06);
+}
+
+.combo-checkbox-group .combo-checkbox-item input[type="checkbox"] {
+  margin: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--primary);
+}
+
+.combo-checkbox-group .combo-checkbox-item label {
+  font-size: 0.95rem;
+  color: var(--foreground);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.combo-checkbox-group .combo-checkbox-item input[type="checkbox"]:checked + label {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.combo-info-text {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--secondary);
 }
 
 .form-group input:focus {
